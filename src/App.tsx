@@ -1,13 +1,17 @@
 import React from "react";
 import style from "./App.module.scss";
-import { Tweet } from "./components";
+import { Subscribe } from "@react-rxjs/core";
+import { tweets } from "./observables";
+import { Header } from "./components/Header/Header";
+import { Tweets } from "./components/Tweets/Tweets";
 
 function App() {
     return (
         <div className={style.app}>
-            <main>
-                <Tweet account="Some person" timestamp={Date.now()} content="Bla bla bla" />
-            </main>
+            <Header />
+            <Subscribe source$={tweets}>
+                <Tweets />
+            </Subscribe>
         </div>
     );
 }
