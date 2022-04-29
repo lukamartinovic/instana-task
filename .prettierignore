@@ -1,0 +1,11 @@
+build/
+coverage/
+dist/
+node_modules/
+package.json
+public/
+README.md
+package.json
+package-lock.json
+yarn.lock
+yarn-error.log
