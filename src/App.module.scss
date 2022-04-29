@@ -1,0 +1,15 @@
+.app {
+  display: grid;
+  place-items: center;
+
+  > main {
+    background: white;
+    width: 38rem;
+    height: 100vh;
+    border: 1px solid lightgray;
+
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+    }
+  }
+}

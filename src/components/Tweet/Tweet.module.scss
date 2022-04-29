@@ -1,0 +1,38 @@
+.tweet {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  border-bottom: 1px solid lightgray;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+
+  img {
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    small {
+      color: gray;
+    }
+
+    div {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+
+}
