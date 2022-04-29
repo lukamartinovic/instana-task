@@ -23,7 +23,7 @@ const Tweets = ({ filterLiked }: { filterLiked: boolean }) => {
 
     return (
         <main className={style.tweets}>
-            {tweetsToMap.length > 1 &&
+            {tweetsToMap.length > 0 &&
                 tweetTransition((styles, item) => (
                     <animated.div style={styles}>
                         <Tweet {...item} />
