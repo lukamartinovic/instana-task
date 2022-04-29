@@ -12,7 +12,14 @@
   position: sticky;
   top: 0;
 
+  white-space: nowrap;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 0.85rem;
+  }
+
   > span {
+    align-items: center;
     padding: 0.5rem;
     display: flex;
     gap: 1rem;
@@ -33,10 +40,15 @@
     border-radius: 1rem;
     font-weight: 00;
 
+    @media (hover: hover) {
+      &:hover {
+        background: var(--color-brand);
+        cursor: pointer;
+      }
+    }
 
-    &:hover {
+    &:active {
       background: var(--color-brand);
-      cursor: pointer;
     }
   }
 
