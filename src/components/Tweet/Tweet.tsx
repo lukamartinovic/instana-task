@@ -2,15 +2,13 @@ import style from "./Tweet.module.scss";
 import { TweetProps } from "./Tweet.types";
 import pfp from "assets/pfp.png";
 import { LikeButton } from "components/Shared";
-import likedTweets from "../../observables/likedTweets";
+import { onLike } from "../../observables/tweetActions";
 
 const Tweet = ({ account, timestamp, content, id, liked }: TweetProps): JSX.Element => {
     const handle = account.split(" ").join("").toLowerCase();
     const age = Math.round((Date.now() - +timestamp) / 1000) + "s";
 
-    const handleLike = () => {
-        likedTweets.next([...likedTweets.getValue(), id]);
-    };
+    const handleLike = () => onLike(id);
 
     return (
         <article className={style.tweet}>

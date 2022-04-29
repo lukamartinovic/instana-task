@@ -1,0 +1,43 @@
+.header {
+  border: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 3rem;
+  background: white;
+  z-index: 1;
+  padding: 0.25rem 0.5rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+
+  > span {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+  }
+
+  svg{
+    fill: var(--color-brand);
+  }
+
+  button {
+    border: 1px solid whitesmoke;
+    background: none;
+    transition: all 250ms ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 00;
+
+
+    &:hover {
+      background: var(--color-brand);
+      cursor: pointer;
+    }
+  }
+
+}
