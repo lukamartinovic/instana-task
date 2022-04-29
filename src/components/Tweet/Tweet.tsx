@@ -1,6 +1,7 @@
 import style from "./Tweet.module.scss";
 import { TweetProps } from "./Tweet.types";
 import pfp from "assets/pfp.png";
+import { LikeButton } from "components/Shared";
 
 const Tweet = ({ account, timestamp, content }: TweetProps): JSX.Element => {
     const handle = account.split(" ").join("").toLowerCase();
@@ -18,7 +19,12 @@ const Tweet = ({ account, timestamp, content }: TweetProps): JSX.Element => {
                 <div>
                     <p>{content}</p>
                 </div>
-                <div>buttons</div>
+                <div className={style.buttons}>
+                    <button className={style.like}>
+                        <LikeButton active={false} />
+                        <small>0</small>
+                    </button>
+                </div>
             </main>
         </article>
     );
